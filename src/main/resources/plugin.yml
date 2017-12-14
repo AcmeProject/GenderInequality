@@ -1,0 +1,6 @@
+name: GenderInequality
+version: ${project.version}
+main: net.poweredbyawesome.genderinequality.GenderInequality
+depend: [Gender]
+softdepend: [MoneyOvertime,SwearJar]
+authors: [LaxWasHere]
