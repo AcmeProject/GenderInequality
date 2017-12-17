@@ -1,6 +1,6 @@
-name: GenderInequality
+name: GenderInequalityECO
 version: ${project.version}
-main: net.poweredbyawesome.genderinequality.GenderInequality
+main: net.poweredbyawesome.genderinequality.GenderInequalityEcon
 depend: [Gender]
 softdepend: [MoneyOvertime,SwearJar]
 authors: [LaxWasHere]

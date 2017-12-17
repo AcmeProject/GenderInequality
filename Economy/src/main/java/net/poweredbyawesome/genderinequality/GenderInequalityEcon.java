@@ -10,9 +10,9 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.util.HashMap;
 import java.util.logging.Level;
 
-public final class GenderInequality extends JavaPlugin {
+public final class GenderInequalityEcon extends JavaPlugin {
 
-    public static GenderInequality instance;
+    public static GenderInequalityEcon instance;
     public static MentalIllness mentalIllness;
     public HashMap<String, HashMap<String, Double>> base = new HashMap<>();
 
@@ -21,7 +21,6 @@ public final class GenderInequality extends JavaPlugin {
         saveDefaultConfig();
         instance = this;
         for (String s : getConfig().getConfigurationSection("plugins").getKeys(false)) {
-            System.out.println("Adding: " + s);
             base.put(s, new HashMap<>());
         }
         checkDependencies();
@@ -32,7 +31,6 @@ public final class GenderInequality extends JavaPlugin {
             getLogger().log(Level.INFO, "Plugin Found: Gender!");
             GenderPlugin genderPlugin = (GenderPlugin) Bukkit.getPluginManager().getPlugin("Gender");
             mentalIllness = genderPlugin.goMental();
-
         } else {
             getLogger().log(Level.SEVERE, "Gender plugin not found, disabling plugin.");
             Bukkit.getPluginManager().disablePlugin(this);
@@ -45,7 +43,6 @@ public final class GenderInequality extends JavaPlugin {
                 base.get("MoneyOvertime").put(s,getConfig().getDouble("plugins.MoneyOvertime."+s));
             }
         }
-
         if (getServer().getPluginManager().getPlugin("SwearJar") != null) {
             Bukkit.getPluginManager().registerEvents(new ChargeEventListener(), this);
             getLogger().log(Level.INFO, "Plugin Found: SwearJar!");

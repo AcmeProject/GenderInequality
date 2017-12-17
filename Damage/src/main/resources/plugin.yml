@@ -1,0 +1,5 @@
+name: GenderInequalityDMG
+version: ${project.version}
+main: net.poweredbyawesome.genderinequality.GenderInequalityDMG
+depend: [Gender]
+authors: [LaxWasHere]
